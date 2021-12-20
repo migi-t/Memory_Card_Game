@@ -1,0 +1,47 @@
+Memory card game
+Description:
+Simple memory card game to be played by multiple people at the same time
+Rules: User chooses amount of cards(8-52), players(2-6) and
+player names(1-15letters). Program checks that all inputs are valid.
+
+How the game plays out for users:
+	Game is started by pressing <PLAY!>.
+	In each turn one player has to reveal two individual cards, if pairs are
+	found, moves them to players stack of cards. Turn is passed to next player
+	manually by clicking <SWITCH TURN>. Once all the card pairs have been found,
+	the game ends and results are shown to players. New game can be started by
+	clicking <RESTART>, which restores the game back to its default state.
+
+Features:
+-User can change the amount of players and choose their names
+-Game shows who is at the moment in turn
+-Game can be played with changing amount of cards
+-Cards are positioned in balanced rows/columns, square is ideal shape
+-Only two different cards can be revealed by user in one turn
+-Cards backside's picture is universal for every card, but cards frontside's picture
+is individual and shows the cards letter in it
+-User decides when the turn is passed to the next player, revealed cards are set hidden if they were not pairs
+-If user finds pairs, the card is moved to his stack of cards, which updates with the state of the game
+-Card stacks are shown as pictures of card stacked on top each other
+-When game ends, scores are shown and possibly added to the file of top 20 scores of all time
+-Game tells what cards each player got during the game
+-Game uses timer, which starts when user starts new game and shows time spent on one game
+-Game can be totally reset any time back to its default values
+
+Some info about design and other technical decisions made in coding the program:
+	-Clickable cards are generated as QPushButtons and a picture is set on
+	-the button, picture changes based on the state of the card(Open/Hidden).
+	-Cards in players stack of cards are QLabels with picture on them.
+	-Pictures in buttons and labels are set with QPixmap.
+	-The pictures themselves are made by a friend of mine, they cannot be found
+	on the internet.
+	-Most of the UI is made with QtDesigner.
+	-Cards and players are depicted using classes.
+	-After one game has ended, modifies a .txt file with top 20 scores in it.
+	-Game disables/enables some UI components based on the state of the game
+	for preventing mistakes/errors caused by user clicking around etc.
+
+Programs writer:
+Name: Eetu Kemppi
+E-Mail: eetu.kemppi@protonmail.com
+ 
