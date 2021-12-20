@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+ 
+*pro.user
+*build*
+git_resource
+debug
+release
